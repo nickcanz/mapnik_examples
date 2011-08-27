@@ -2,14 +2,20 @@ import mapnik
 
 m = mapnik.Map(1500, 1500, "+proj=latlong +datum=NAD83")
 
-m.background = mapnik.Color('#000000')
+m.background = mapnik.Color('#111')
 
 s = mapnik.Style()
 
 r = mapnik.Rule()
-#r.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#f2eff9')))
+
 r.symbols.append(mapnik.LineSymbolizer(mapnik.Color('#FFFFFF'),0.1))
+
+filter_rule = mapnik.Rule()
+filter_rule.filter = mapnik.Filter("[LFROMADD]='100' or [RFROMADD]='100'")
+filter_rule.symbols.append(mapnik.LineSymbolizer(mapnik.Color('#8a00f4'),0.5))
+
 s.rules.append(r)
+s.rules.append(filter_rule)
 
 m.append_style('My Style', s)
 
