@@ -14,7 +14,7 @@ s.rules.append(r)
 m.append_style('My Style', s)
 
 lyr = mapnik.Layer('world', "+proj=latlong +datum=WGS84")
-lyr.datasource = mapnik.Shapefile(file='/Users/ncanzone/development/mapnik_examples/world/world_borders/world_borders')
+lyr.datasource = mapnik.Shapefile(file='/Users/ncanzone/development/mapnik_examples/data/world_borders/world_borders')
 lyr.styles.append('My Style')
 
 m.layers.append(lyr)
