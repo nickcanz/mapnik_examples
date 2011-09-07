@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<!-- Sample Mapnik XML template by Dane Springmeyer -->
+<Map bgcolor="steelblue" srs="+proj=latlong +datum=WGS84">
+
+  <Style name="linestyle">
+    <Rule>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#FFF</CssParameter>
+        <CssParameter name="stroke-width">0.1</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+
+  <Style name="polystyle">
+     <Rule>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">#FF0</CssParameter>
+      </PolygonSymbolizer>
+     </Rule>
+   </Style>
+
+   <Style name="basenamestyle">
+     <Rule>
+       <MaxScaleDenominator>8735659</MaxScaleDenominator>
+      <TextSymbolizer name="SITE_NAME" face_name="DejaVu Sans Book" size="12" fill="white" halo_fill= "#2E2F39" halo_radius="1" wrap_width="20" spacing="5" allow_overlap="false" avoid_edges="true" min_distance="10"/>
+    </Rule>
+   </Style>
+
+  <Layer name="state_bounds" srs="+proj=latlong +datum=NAD83" status="on">
+    <StyleName>linestyle</StyleName>
+    <Datasource>
+      <Parameter name="type">shape</Parameter>
+      <Parameter name="file">/Users/ncanzone/development/mapnik_examples/data/boundaries/co2000p020</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="military_bounds" srs="+proj=latlong +datum=WGS84" status="on">
+    <StyleName>linestyle</StyleName>
+    <StyleName>polystyle</StyleName>
+    <StyleName>basenamestyle</StyleName>
+    <Datasource>
+      <Parameter name="type">shape</Parameter>
+      <Parameter name="file">/Users/ncanzone/development/mapnik_examples/data/military/MILITARY_INSTALLATIONS_RANGES_TRAINING_AREAS_BND</Parameter>
+    </Datasource>
+  </Layer>
+</Map>
