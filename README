@@ -1,0 +1,8 @@
+Mapnik Examples for Philly PUG
+
+=To get the shapefile data used in these examples
+
+  wget http://sudobangbang.net/static/shapefiles.tar.gz
+
+And extract it to a `data` folder.
+
