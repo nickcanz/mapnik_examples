@@ -22,16 +22,15 @@ m.append_style('My Style', s)
 
 #add shape information for specific cities
 inputs = [
-  ("philly/tl_2010_42101_edges", "philly.png"),
-  ("portland/tl_2010_41051_edges", "portland.png"),
-  ("newyork/tl_2010_36061_edges", "newyork.png"),
-  ("boston/tl_2010_25025_edges", "boston.png"),
+  ("../data/philly/tl_2010_42101_edges", "philly.png"),
+  ("../data/portland/tl_2010_41051_edges", "portland.png"),
+  ("../data/newyork/tl_2010_36061_edges", "newyork.png"),
+  ("../data/boston/tl_2010_25025_edges", "boston.png"),
 ]
-base_data = "/Users/ncanzone/development/mapnik_examples/data/"
 
 def make_map(shpfile, img_name):
   lyr = mapnik.Layer('world', "+proj=latlong +datum=NAD83")
-  lyr.datasource = mapnik.Shapefile(file=base_data + shpfile)
+  lyr.datasource = mapnik.Shapefile(file=shpfile)
   lyr.styles.append('My Style')
   m.layers.append(lyr)
   m.zoom_to_box(lyr.envelope())

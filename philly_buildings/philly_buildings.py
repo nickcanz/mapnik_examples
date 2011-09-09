@@ -21,7 +21,7 @@ s.rules.append(filter_rule)
 m.append_style('My Style', s)
 
 lyr = mapnik.Layer('world', "+proj=latlong +datum=NAD83")
-lyr.datasource = mapnik.Shapefile(file='/Users/ncanzone/development/mapnik_examples/data/philly_buildings/PhiladelphiaBuildings200712')
+lyr.datasource = mapnik.Shapefile(file='../data/philly_buildings/PhiladelphiaBuildings200712')
 lyr.styles.append('My Style')
 
 m.layers.append(lyr)

@@ -73,7 +73,7 @@
             // Attempt to zoom to the data extent by querying Mapnik through TileLite
             // This should fail silently if the getJSON does not return data...
             //zoom_to_tilelite_extents();
-            map.setCenter(new OpenLayers.LonLat(-8431552, 4815376), 7, true, true);
+            map.setCenter(new OpenLayers.LonLat(-8431552, 4815376), 6, true, true);
             
             map.events.register("moveend", map, getZoom);
             map.events.register("zoomend", map, getZoom);
