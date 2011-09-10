@@ -1,4 +1,9 @@
+import sys
 import mapnik
+
+output_file = '../images/world.png'
+if len(sys.argv) > 1:
+  output_file = sys.argv[1]
 
 m = mapnik.Map(600, 300, "+proj=latlong +datum=WGS84")
 
@@ -20,5 +25,5 @@ lyr.styles.append('My Style')
 m.layers.append(lyr)
 m.zoom_to_box(lyr.envelope())
 
-mapnik.render_to_file(m, 'world.png', 'png')
+mapnik.render_to_file(m, output_file, 'png')
 
