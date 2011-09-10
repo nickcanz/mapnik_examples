@@ -31,7 +31,7 @@
     <StyleName>linestyle</StyleName>
     <Datasource>
       <Parameter name="type">shape</Parameter>
-      <Parameter name="file">../data/boundaries/co2000p020</Parameter>
+      <Parameter name="file">data/boundaries/co2000p020</Parameter>
     </Datasource>
   </Layer>
   <Layer name="military_bounds" srs="+proj=latlong +datum=WGS84" status="on">
@@ -40,7 +40,7 @@
     <StyleName>basenamestyle</StyleName>
     <Datasource>
       <Parameter name="type">shape</Parameter>
-      <Parameter name="file">../data/military/MILITARY_INSTALLATIONS_RANGES_TRAINING_AREAS_BND</Parameter>
+      <Parameter name="file">data/military/MILITARY_INSTALLATIONS_RANGES_TRAINING_AREAS_BND</Parameter>
     </Datasource>
   </Layer>
 </Map>

@@ -11,9 +11,9 @@ end
 
 desc "Create all map examples"
 task :createmaps do
-  FileUtils.rmdir 'images'
+  FileUtils.rm_rf 'images'
   FileUtils.mkdir 'images'
-  %w{ address/address.py world/world.py philly_buildings/philly_buildings.py xml_styling/world_map.py military_bases/military_bases.py }.each do |script|
+  %w{ address.py world.py philly_buildings.py world_map.py military_bases.py }.each do |script|
     `python #{script}`
   end
 end

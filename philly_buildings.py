@@ -27,4 +27,4 @@ lyr.styles.append('My Style')
 m.layers.append(lyr)
 m.zoom_to_box(lyr.envelope())
 
-mapnik.render_to_file(m, 'philly_buildings.png', 'png')
+mapnik.render_to_file(m, 'images/philly_buildings.png', 'png')
