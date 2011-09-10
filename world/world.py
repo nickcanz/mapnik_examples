@@ -1,7 +1,7 @@
 import sys
 import mapnik
 
-output_file = '../images/world.png'
+output_file = 'images/world.png'
 if len(sys.argv) > 1:
   output_file = sys.argv[1]
 
@@ -19,7 +19,7 @@ s.rules.append(r)
 m.append_style('My Style', s)
 
 lyr = mapnik.Layer('world', "+proj=latlong +datum=WGS84")
-lyr.datasource = mapnik.Shapefile(file='../data/world_borders/world_borders')
+lyr.datasource = mapnik.Shapefile(file='data/world_borders/world_borders')
 lyr.styles.append('My Style')
 
 m.layers.append(lyr)

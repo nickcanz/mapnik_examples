@@ -1,8 +1,8 @@
 import sys
 import mapnik
-mapfile = "population.xml"
+mapfile = "xml_styling/population.xml"
 
-output_file = '../images/world_population.png'
+output_file = 'images/world_population.png'
 if len(sys.argv) > 1:
   output_file = sys.argv[1]
 

@@ -1,7 +1,7 @@
 import sys
 import mapnik
 
-output_file = "../images/military_bases.png"
+output_file = "images/military_bases.png"
 if len(sys.argv) > 1:
   output_file = sys.argv[1]
 
@@ -23,13 +23,13 @@ poly_style.rules.append(poly_rule)
 m.append_style('Poly Style', poly_style)
 
 mil_bases_lyr = mapnik.Layer('mil_bases', "+proj=latlong +datum=WGS84")
-mil_bases_lyr.datasource = mapnik.Shapefile(file='../data/military/MILITARY_INSTALLATIONS_RANGES_TRAINING_AREAS_BND')
+mil_bases_lyr.datasource = mapnik.Shapefile(file='data/military/MILITARY_INSTALLATIONS_RANGES_TRAINING_AREAS_BND')
 mil_bases_lyr.styles.append('My Style')
 mil_bases_lyr.styles.append('Poly Style')
 m.layers.append(mil_bases_lyr)
 
 state_bounds_lyr = mapnik.Layer('state_bounds', "+proj=latlong +datum=NAD83")
-state_bounds_lyr.datasource = mapnik.Shapefile(file='../data/boundaries/co2000p020')
+state_bounds_lyr.datasource = mapnik.Shapefile(file='data/boundaries/co2000p020')
 state_bounds_lyr.styles.append('My Style')
 m.layers.append(state_bounds_lyr)
 

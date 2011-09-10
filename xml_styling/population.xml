@@ -125,7 +125,7 @@
       <Parameter name="type">shape</Parameter>
      <!-- FIXME -->
      <!-- Note:  'TM_WORLD_BORDERS_SIMPL-0.3' is the name of the shapefile (without the .shp file extension) -->
-      <Parameter name="file">../data/world_borders_pop/TM_WORLD_BORDERS_SIMPL_0.3_MOD</Parameter>
+      <Parameter name="file">data/world_borders_pop/TM_WORLD_BORDERS_SIMPL_0.3_MOD</Parameter>
     </Datasource>
   </Layer>
 
