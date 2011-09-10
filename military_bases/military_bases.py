@@ -1,4 +1,9 @@
+import sys
 import mapnik
+
+output_file = "../images/military_bases.png"
+if len(sys.argv) > 1:
+  output_file = sys.argv[1]
 
 m = mapnik.Map(4500, 2500, "+proj=latlong +datum=WGS84")
 
@@ -7,7 +12,6 @@ m.background = mapnik.Color('steelblue')
 s = mapnik.Style()
 
 r = mapnik.Rule()
-#r.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#f2eff9')))
 r.symbols.append(mapnik.LineSymbolizer(mapnik.Color('#FFF'),0.1))
 s.rules.append(r)
 m.append_style('My Style', s)
@@ -33,4 +37,4 @@ bbox = mapnik.Envelope(mapnik.Coord(-126.914,49.610), mapnik.Coord(-65.083,23.72
 
 m.zoom_to_box(bbox)
 
-mapnik.render_to_file(m, 'military_bases.png', 'png')
+mapnik.render_to_file(m, output_file, 'png')
