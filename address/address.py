@@ -22,10 +22,10 @@ m.append_style('My Style', s)
 
 #add shape information for specific cities
 inputs = [
-  ("../data/philly/tl_2010_42101_edges", "philly.png"),
-  ("../data/portland/tl_2010_41051_edges", "portland.png"),
-  ("../data/newyork/tl_2010_36061_edges", "newyork.png"),
-  ("../data/boston/tl_2010_25025_edges", "boston.png"),
+  ("../data/philly/tl_2010_42101_edges",    "../images/philly.png"),
+  ("../data/portland/tl_2010_41051_edges",  "../images/portland.png"),
+  ("../data/newyork/tl_2010_36061_edges",   "../images/newyork.png"),
+  ("../data/boston/tl_2010_25025_edges",    "../images/boston.png"),
 ]
 
 def make_map(shpfile, img_name):
