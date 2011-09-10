@@ -17,3 +17,8 @@ task :createmaps do
     `python #{script}`
   end
 end
+
+desc "Start tilelite server"
+task :tileserver do
+  `liteserv.py -c --processes=2 --cache-path=/tmp/milbases military_bases.xml`
+end
