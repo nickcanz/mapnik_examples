@@ -6,11 +6,12 @@ Written for talk that I am giving for [Philly PUG meeting](http://www.meetup.com
 
 ## World Borders Example
 
-This is the 'Hello World' of Mapnik, taken from [this Mapnik tutorial](http://trac.mapnik.org/wiki/GettingStarted). The result will be an image displaying the borders of the countries of the world. The data comes from [Mapping Hacks](http://mappinghacks.com/data/).
+This is the 'Hello World' of Mapnik, taken from [this Mapnik tutorial](http://trac.mapnik.org/wiki/GettingStarted). The result will be an image displaying the borders of the countries of the world.
 
  * __To Run__ `python world.py`
  * __Output__ images/world.png
- * __Data__ data/world_borders
+ * __Data Source__ [Mapping Hacks](http://mappinghacks.com/data/).
+ * __Data Files__ data/world_borders
 
 ## World Population Example
 
@@ -18,7 +19,8 @@ This example uses an xml file to specify styling and layers instead writing pyth
 
  * __To Run__ `python world_population.py`
  * __Output__ images/world_population.png
- * __Data__ data/world_borders_pop
+ * __Data Source__ [Mapnik Tutorial site](http://trac.mapnik.org/attachment/wiki/XMLGettingStarted/world_borders.zip)
+ * __Data Files__ data/world_borders_pop
 
 ## Addresses Example
 
@@ -28,4 +30,26 @@ In regards to Mapnik, this example shows how to change the styling of the map ba
 
  * __To Run__ `python address.py`
  * __Output__ images/ boston.png, newyork.png, philly.png, portland.png
- * __Data__ data/ boston, newyork, philly, portland
+ * __Data Source__ [Census Tiger line data](http://www.census.gov/cgi-bin/geo/shapefiles2010/main)
+ * __Data Files__ data/ boston, newyork, philly, portland
+
+## Philly Buildings Example
+
+ * __To Run__ `python philly_buildings.py`
+ * __Output__ images/philly_buildings.png
+ * __Data Source__ [PASDA](http://www.pasda.psu.edu/uci/PhiladelphiaAgreement.asp?File=http://www.pasda.psu.edu/philacity/data/PhiladelphiaBuildings200712.zip) (via [Open Data Philly](http://opendataphilly.org/opendata/resource/6/buildings/))
+ * __Data Files__ data/philly_buildings
+
+## Military Bases Example
+
+ * __To Run__ `python military_bases.py`
+ * __Output__ images/military_bases.png
+ * __Data Source__ DOD Dataset via [Data.gov](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3)
+ * __Data Files__ data/military_bases
+
+## Military Bases Slippy Map Example
+
+ * __To Run__ `liteserv.py military_bases.xml`
+ * __Output__ Opening openlayers.html will show the layer produced
+ * __Data Source__ DOD Dataset via [Data.gov](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3)
+ * __Data Files__ data/military_bases
