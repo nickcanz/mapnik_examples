@@ -1,4 +1,4 @@
-%w{ python-werkzeug rake python-setuptools libmapnik0.7 mapnik-utils python-mapnik }.each do |pkg|
+%w{ gdal-bin python-werkzeug rake python-setuptools libmapnik0.7 mapnik-utils python-mapnik }.each do |pkg|
   apt_package pkg do
     action :install
   end
