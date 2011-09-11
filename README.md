@@ -6,8 +6,8 @@ Written for talk that I am giving for [Philly PUG meeting](http://www.meetup.com
 
 ## World Borders Example
 
-This is the 'Hello World' of the Mapnik world. The result will be an image displaying the borders of the countries of the world.
+This is the 'Hello World' of the Mapnik world. The result will be an image displaying the borders of the countries of the world. The data comes from [Mapping Hacks](http://mappinghacks.com/data/).
 
- * __To Run:__  world.py
- * __Output:__ images/world.png
- * __Data:__ data/world_borders
+ * __To Run__  world.py
+ * __Output__ images/world.png
+ * __Data__ data/world_borders
