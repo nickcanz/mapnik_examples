@@ -59,33 +59,33 @@ The `ogrinfo` command comes when you install the GDAL library and allows you to 
 
 In this case, running the above command on the `PhiladelphiaBuildings200712.shp` file returns the following data:
 
-  Layer name: PhiladelphiaBuildings200712
-  Geometry: Polygon
-  Feature Count: 390293
-  Extent: (2645877.045900, 178938.659570) - (2761445.799878, 343055.989383)
-  Layer SRS WKT:
-  PROJCS["NAD_1983_StatePlane_Pennsylvania_South_FIPS_3702_Feet",
-      GEOGCS["GCS_North_American_1983",
-          DATUM["North_American_Datum_1983",
-              SPHEROID["GRS_1980",6378137.0,298.257222101]],
-          PRIMEM["Greenwich",0.0],
-          UNIT["Degree",0.0174532925199433]],
-      PROJECTION["Lambert_Conformal_Conic_2SP"],
-      PARAMETER["False_Easting",1968500.0],
-      PARAMETER["False_Northing",0.0],
-      PARAMETER["Central_Meridian",-77.75],
-      PARAMETER["Standard_Parallel_1",39.93333333333333],
-      PARAMETER["Standard_Parallel_2",40.96666666666667],
-      PARAMETER["Latitude_Of_Origin",39.33333333333334],
-      UNIT["Foot_US",0.3048006096012192]]
-  AREA: Real (19.8)
-  PERIMETER: Real (19.8)
-  FCODE: Integer (10.0)
-  ELEV: Real (19.8)
-  SOURCE: String (10.0)
-  DATE_UPDAT: String (4.0)
-  AREA_1: Real (19.11)
-  LEN: Real (19.11)
+    Layer name: PhiladelphiaBuildings200712
+    Geometry: Polygon
+    Feature Count: 390293
+    Extent: (2645877.045900, 178938.659570) - (2761445.799878, 343055.989383)
+    Layer SRS WKT:
+    PROJCS["NAD_1983_StatePlane_Pennsylvania_South_FIPS_3702_Feet",
+        GEOGCS["GCS_North_American_1983",
+            DATUM["North_American_Datum_1983",
+                SPHEROID["GRS_1980",6378137.0,298.257222101]],
+            PRIMEM["Greenwich",0.0],
+            UNIT["Degree",0.0174532925199433]],
+        PROJECTION["Lambert_Conformal_Conic_2SP"],
+        PARAMETER["False_Easting",1968500.0],
+        PARAMETER["False_Northing",0.0],
+        PARAMETER["Central_Meridian",-77.75],
+        PARAMETER["Standard_Parallel_1",39.93333333333333],
+        PARAMETER["Standard_Parallel_2",40.96666666666667],
+        PARAMETER["Latitude_Of_Origin",39.33333333333334],
+        UNIT["Foot_US",0.3048006096012192]]
+    AREA: Real (19.8)
+    PERIMETER: Real (19.8)
+    FCODE: Integer (10.0)
+    ELEV: Real (19.8)
+    SOURCE: String (10.0)
+    DATE_UPDAT: String (4.0)
+    AREA_1: Real (19.11)
+    LEN: Real (19.11)
 
 So, this command outputs a lot of data, but what interests us? If this is the first time that we're seeing this dataset, an important piece of information would the `DATUM` attribute, which specifies the projection of the layer. The other important piece of information this provides are names of all the attributes of the layer. These attributes are what we will use to create an interesting map out of this data.
 
