@@ -98,8 +98,8 @@ So, this command outputs a lot of data, but what interests us? If this is the fi
 
  * __To Run__ `python military_bases.py`
  * __Output__ images/military_bases.png
- * __Data Source__ DOD Dataset via [Data.gov](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3)
- * __Data Files__ data/military_bases
+ * __Data Source__ [Military Installations](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3) via Data.gov and [National county borders](http://www.data.gov/geodata/g602085/) via Data.gov
+ * __Data Files__ data/military_bases and data/boundaries
 
 ## Military Bases Slippy Map Example
 
