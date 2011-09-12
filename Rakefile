@@ -13,8 +13,10 @@ desc "Create all map examples"
 task :createmaps do
   FileUtils.rm_rf 'images'
   FileUtils.mkdir 'images'
-  %w{ address.py world.py philly_buildings.py world_map.py military_bases.py }.each do |script|
+  %w{ address.py world.py philly_buildings.py world_population.py military_bases.py }.each do |script|
+    puts "==============Running #{script}=============="
     `python #{script}`
+    puts "==============Finished #{script}=============="
   end
 end
 
