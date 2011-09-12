@@ -11,12 +11,19 @@ r.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#f2eff9')))
 r.symbols.append(mapnik.LineSymbolizer(mapnik.Color('rgb(50%,50%,50%)'),0.1))
 s.rules.append(r)
 
-where_filter = "[FCODE] = 1820"
-filter_rule = mapnik.Rule()
-filter_rule.filter = mapnik.Filter(where_filter)
-filter_rule.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#FF0')))
-filter_rule.symbols.append(mapnik.LineSymbolizer(mapnik.Color('#FF0'),0.1))
-s.rules.append(filter_rule)
+#FCODE 1820 is 'institutional'
+type_filter_rule = mapnik.Rule()
+type_filter_rule.filter = mapnik.Filter("[FCODE] = 1820")
+type_filter_rule.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#FF0')))
+type_filter_rule.symbols.append(mapnik.LineSymbolizer(mapnik.Color('#FF0'),0.1))
+s.rules.append(type_filter_rule)
+
+elev_filter_rule = mapnik.Rule()
+elev_filter_rule.filter = mapnik.Filter("[ELEV] = 0")
+elev_filter_rule.symbols.append(mapnik.PolygonSymbolizer(mapnik.Color('#F00')))
+elev_filter_rule.symbols.append(mapnik.LineSymbolizer(mapnik.Color('#F00'),0.1))
+s.rules.append(elev_filter_rule)
+
 
 m.append_style('My Style', s)
 
