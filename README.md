@@ -98,12 +98,13 @@ So, this command outputs a lot of data, but what interests us? If this is the fi
 
  * __To Run__ `python military_bases.py`
  * __Output__ images/military_bases.png
- * __Data Source__ [Military Installations](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3) via Data.gov and [National county borders](http://www.data.gov/geodata/g602085/) via Data.gov
  * __Data Files__ data/military_bases and data/boundaries
 
 ## Military Bases Slippy Map Example
 
+This example uses the [Tilelite python library](https://bitbucket.org/springmeyer/tilelite/wiki/Home) that takes the same XML file that Mapnik uses to do styling and uses it to produce map tiles of a particular zoom and bounding box.
+
  * __To Run__ `liteserv.py military_bases.xml`
  * __Output__ Opening openlayers.html will show the layer produced
- * __Data Source__ DOD Dataset via [Data.gov](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3)
+ * __Data Source__ [Military Installations](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3) via Data.gov and [National county borders](http://www.data.gov/geodata/g602085/) via Data.gov
  * __Data Files__ data/military_bases
