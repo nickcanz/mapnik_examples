@@ -89,6 +89,10 @@ In this case, running the above command on the `PhiladelphiaBuildings200712.shp`
 
 So, this command outputs a lot of data, but what interests us? If this is the first time that we're seeing this dataset, an important piece of information would the `DATUM` attribute, which specifies the projection of the layer. The other important piece of information this provides are names of all the attributes of the layer. These attributes are what we will use to create an interesting map out of this data.
 
+For this buildings example, I thought that `FCODE` and `ELEV` were interesting. Reading through the metadata documentation [Open Data Philly](http://opendataphilly.org/opendata/resource/6/buildings/), we see that `FCODE` is some type of building code. An `FCODE` of 1820 is marked as an "Institutional" building; I'm not entirely sure what the means exactly, but from looking at the data it might buildings that are run by the City? Regardless, in the example here, all buildings with an `FCODE` of 1820 are colored yellow.
+
+Another piece of information that is currently very relevant due to flooding is elevation. For all buildings with an elevation of 0, I've colored them red. This coloring provides a view of the river/water system in Philadelphia without ever having to actually laod the rivers.
+
  * __To Run__ `python philly_buildings.py`
  * __Output__ images/philly_buildings.png
  * __Data Source__ [PASDA](http://www.pasda.psu.edu/uci/PhiladelphiaAgreement.asp?File=http://www.pasda.psu.edu/philacity/data/PhiladelphiaBuildings200712.zip) (via [Open Data Philly](http://opendataphilly.org/opendata/resource/6/buildings/))
@@ -96,8 +100,11 @@ So, this command outputs a lot of data, but what interests us? If this is the fi
 
 ## Military Bases Example
 
+This example takes a shapefile with the boundaries of all the military installations in the United States and colors those bases yellow. For reference, a shape layer with the borders of all of the counties of the United States is show also.
+
  * __To Run__ `python military_bases.py`
  * __Output__ images/military_bases.png
+ * __Data Source__ [Military Installations](http://explore.data.gov/National-Security-and-Veterans-Affairs/Military-Installations-Ranges-and-Training-Areas/wcc7-57p3) via Data.gov and [National county borders](http://www.data.gov/geodata/g602085/) via Data.gov
  * __Data Files__ data/military_bases and data/boundaries
 
 ## Military Bases Slippy Map Example
